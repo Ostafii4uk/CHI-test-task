@@ -2,9 +2,13 @@
   position: relative;
 
   padding: 64px;
+  margin: auto;
   
-  border: 1px solid rgba(48, 50, 71, 0.1);
-  border-radius: 20px;
+  height: 630px;
+  width: 500px;
+
+  border-radius: 5px;
+  background-color: white;
 
   &__wrapper {
     width: 70%;
@@ -32,6 +36,12 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__amount {
+    font-size: 30px;
+
+    margin-bottom: 30px;
   }
 
   &__description {
@@ -64,5 +74,10 @@
       cursor: pointer;
       transform: scale(1.2);
     }
+  }
+
+  &__error {
+    margin-top: 8px;
+    color: crimson;
   }
 }

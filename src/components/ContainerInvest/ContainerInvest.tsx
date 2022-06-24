@@ -18,6 +18,7 @@ export const ContainerInvest: React.FC<Props> = ({
   setInvested
 }) => {
   const [query, setQuery] = useState('');
+  const [queryError, setQueryError] = useState(false);
 
   const getDaysTime = (seconds: string | undefined): string | undefined => {
     if (seconds !== undefined) {
@@ -54,7 +55,7 @@ export const ContainerInvest: React.FC<Props> = ({
           </p>
         </div>
 
-        <h2 className='invest__title'>
+        <h2 className='invest__amount'>
           Investment amount
         </h2>
       </div>
@@ -63,21 +64,34 @@ export const ContainerInvest: React.FC<Props> = ({
           type="number"
           className='invest__input'
           value={query}
-          onChange={event => setQuery(event.target.value)}
+          onChange={event => {
+            setQuery(event.target.value);
+            setQueryError(false);
+          }}
           placeholder='Type a number'
         />
         <button 
           className='loan__button'
           onClick={() => {
-            setVisivleBoxInvestId();
-            setQuery('');
-            setAvailableAmount(calculateNewSumAmount(availableAmount, query));
-            setInvested((currentInvested: any) => [...currentInvested, loan?.id])
+            if (query) {
+              setAvailableAmount(calculateNewSumAmount(availableAmount, query));
+              setInvested((currentInvested: any) => [...currentInvested, loan?.id]);
+              setQuery('');
+              setVisivleBoxInvestId();
+            } else {
+              setQueryError(true)
+            }
           }}
         >
           invest
         </button>
       </div>
+      {queryError
+        &&
+          <div className="invest__error">
+            Please enter the number
+          </div>
+      }
       <svg
         onClick={() => setVisivleBoxInvestId('')}
         className='invest__close'

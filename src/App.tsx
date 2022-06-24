@@ -15,14 +15,11 @@ export const App: React.FC = () => {
   }
   const [availableAmount, setAvailableAmount] = useState(getSumAmount(loansFromServer));
 
-
   const getLoanActive = (loans: Loan[], id: string): Loan | undefined => {
     return loans.find(loan => loan.id === id)
   }
-
   const [invested, setInvested] = useState([]);
 
-  console.log(invested);
   return (
     <div className="app">
       <h1 className='app__title'>
