@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/CHI-test-task/static/css/main.650eca95.css",
-    "main.js": "/CHI-test-task/static/js/main.8d63a07e.js",
+    "main.css": "/CHI-test-task/static/css/main.22c30b7d.css",
+    "main.js": "/CHI-test-task/static/js/main.00414ae6.js",
     "index.html": "/CHI-test-task/index.html",
-    "main.650eca95.css.map": "/CHI-test-task/static/css/main.650eca95.css.map",
-    "main.8d63a07e.js.map": "/CHI-test-task/static/js/main.8d63a07e.js.map"
+    "main.22c30b7d.css.map": "/CHI-test-task/static/css/main.22c30b7d.css.map",
+    "main.00414ae6.js.map": "/CHI-test-task/static/js/main.00414ae6.js.map"
   },
   "entrypoints": [
-    "static/css/main.650eca95.css",
-    "static/js/main.8d63a07e.js"
+    "static/css/main.22c30b7d.css",
+    "static/js/main.00414ae6.js"
   ]
 }
