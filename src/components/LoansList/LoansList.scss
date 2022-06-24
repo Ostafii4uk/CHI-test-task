@@ -1,0 +1,70 @@
+.loan {
+  width: 50%;
+  
+  &__title {
+    font-size: 25px;
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    position: relative;
+
+    margin-bottom: 32px;
+    padding: 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid rgba(48, 50, 71, 0.1);
+    border-radius: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__details {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    padding: 16px 32px;
+
+    background-color: #F7E308;
+    border: none;
+    border-radius: 5px;
+
+    text-transform: uppercase;
+
+    color: #303247;
+
+    transition: box-shadow 0.3s linear,
+      transform 0.3s linear;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24), 0 5px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    &:active {
+      transform: translateY(6px);
+    }
+  }
+
+  &__invested {
+    position: absolute;
+    top: 15px;
+    right: 32px;
+
+    color: #51A571;
+    
+    font-size: 16px;
+  }
+}

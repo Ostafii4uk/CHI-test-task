@@ -1,0 +1,42 @@
+.app {
+  &__title {
+    padding: 32px 64px;
+
+    font-size: 30px;
+
+    border-bottom: 1px solid rgba(48, 50, 71, 0.1);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+
+    margin-top: 32px;
+    margin-bottom: 60px;
+    padding: 0 64px;
+  }
+
+  &__amount {
+    width: 50%;
+
+    margin-bottom: 100px;
+    margin-left: 64px;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    &-description {
+      font-size: 20px;
+    }
+
+    &-value {
+      font-size: 20px;
+    }
+  }
+
+  &__container {
+    width: 45%;
+  }
+}
